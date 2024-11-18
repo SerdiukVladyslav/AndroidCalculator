@@ -42,7 +42,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setOperatorButtonListeners() {
-        int[] operatorButtonIds = { R.id.buttonAdd, R.id.buttonSubtract, R.id.buttonMultiply, R.id.buttonDivide };
+        int[] operatorButtonIds = {
+                R.id.buttonAdd, R.id.buttonSubtract,
+                R.id.buttonMultiply, R.id.buttonDivide
+        };
 
         for (int id : operatorButtonIds) {
             findViewById(id).setOnClickListener(this::onOperatorClick);
@@ -105,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void clearDisplay() {
         inputBuilder.setLength(0);
-        displayTextView.setText("");
+        displayTextView.setText("0");
         operand1 = 0;
         operator = "";
         isNewInput = true;
